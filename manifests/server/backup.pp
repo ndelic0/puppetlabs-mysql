@@ -21,6 +21,7 @@ class mysql::server::backup (
   $execpath           = '/usr/bin:/usr/sbin:/bin:/sbin',
   $provider           = 'mysqldump',
   $maxallowedpacket   = '1M',
+  $xtrabackup_package = 'percona-xtrabackup',
 ) {
 
   if $prescript and $provider =~ /(mysqldump|mysqlbackup)/ {
@@ -49,6 +50,7 @@ class mysql::server::backup (
       'postscript'         => $postscript,
       'execpath'           => $execpath,
       'maxallowedpacket'   => $maxallowedpacket,
+      'xtrabackup_package' => $xtrabackup_package,
     }
   })
 
