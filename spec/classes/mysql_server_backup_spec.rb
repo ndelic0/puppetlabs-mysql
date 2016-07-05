@@ -18,6 +18,7 @@ describe 'mysql::server::backup' do
           'delete_before_dump' => true,
           'execpath'           => '/usr/bin:/usr/sbin:/bin:/sbin:/opt/zimbra/bin',
           'maxallowedpacket'   => '1M',
+          'xtrabackup_package' => 'percona-xtrabackup'
         }
       }
 

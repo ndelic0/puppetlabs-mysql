@@ -618,6 +618,10 @@ Sets the server backup implementation. Valid values are:
 
 Define the maximum SQL statement size for the backup dump script. The default value is 1MB as this is the default Mysql Server value.
 
+##### `xtrabackup_package`
+
+A package name for percona-xtrabackup utility.
+
 #### mysql::server::monitor
 
 ##### `mysql_monitor_username`
